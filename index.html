@@ -1,1 +1,102 @@
+        align-items: flex-start;
+      }
 
+      .privacy-link {
+        margin-top: 10px;
+        font-size: 0.82rem;
+      }
+
+      .card {
+        border-radius: 20px;
+      }
+
+      .steps li {
+        padding-left: 54px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        scroll-behavior: auto !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">AT</span>
+        <span>ATNova</span>
+      </div>
+      <a class="privacy-link" href="privacy.html">Política de Privacidade</a>
+    </header>
+
+    <main class="card">
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Gestão da conta</p>
+          <h1>Eliminar conta e dados</h1>
+          <p class="lead">Utilize esta página para pedir a eliminação definitiva da sua conta ATNova e dos dados associados.</p>
+        </div>
+      </section>
+
+      <section class="content">
+        <div>
+          <h2>Como fazer o pedido</h2>
+          <p>O pedido pode ser efetuado sem reinstalar ou voltar a entrar na aplicação.</p>
+
+          <ol class="steps">
+            <li>
+              <strong>Abra o formulário</strong>
+              <span>Aceda ao formulário através do botão apresentado nesta página.</span>
+            </li>
+            <li>
+              <strong>Indique o e-mail da conta</strong>
+              <span>Utilize o endereço de e-mail associado à conta Google usada na ATNova.</span>
+            </li>
+            <li>
+              <strong>Aguarde a confirmação</strong>
+              <span>Após a verificação da identidade, a conta e os dados associados serão eliminados no prazo máximo de 30 dias.</span>
+            </li>
+          </ol>
+        </div>
+
+        <aside class="action-panel">
+          <h2>Solicitar eliminação</h2>
+          <p>O formulário abre numa página segura do Google Forms.</p>
+          <a
+            class="button"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSefKnJNH1g_X9DuIsrlNv93FW2kBViznUsjSnitXJGUTA_0ag/viewform"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Abrir formulário de eliminação <span aria-hidden="true">↗</span></a>
+          <p class="small">Em alternativa, contacte<br><a class="email" href="mailto:curiosidadesautomovel@gmail.com?subject=Pedido%20de%20elimina%C3%A7%C3%A3o%20da%20conta%20ATNova">curiosidadesautomovel@gmail.com</a></p>
+        </aside>
+      </section>
+
+      <section class="data-block">
+        <h2>Dados que serão eliminados</h2>
+        <p>Depois da validação do pedido, a eliminação abrange:</p>
+        <ul>
+          <li>Perfil de autenticação da ATNova;</li>
+          <li>Veículos registados;</li>
+          <li>Fotografias armazenadas;</li>
+          <li>Registos de consumos e manutenções;</li>
+          <li>Modificações e histórico;</li>
+          <li>Preferências associadas à conta.</li>
+        </ul>
+      </section>
+
+      <aside class="notice">
+        <p><strong>Importante:</strong> eliminar a aplicação do dispositivo não elimina automaticamente a conta nem os dados guardados na nuvem. A eliminação da conta é definitiva e irreversível. Alguns dados poderão ser conservados quando exista uma obrigação legal aplicável.</p>
+      </aside>
+    </main>
+
+    <footer>
+      <p>ATNova · Curiosidades Automóvel / AmorimTech</p>
+    </footer>
+  </div>
+</body>
+</html>
