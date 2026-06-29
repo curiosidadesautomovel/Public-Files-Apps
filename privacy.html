@@ -1,3 +1,553 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Política de Privacidade da aplicação ATNova.">
+  <meta name="theme-color" content="#0c302b">
+  <title>Política de Privacidade — ATNova</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --background: #f2f7f5;
+      --surface: #ffffff;
+      --surface-soft: #eaf3f0;
+      --ink: #17312d;
+      --muted: #58706b;
+      --brand: #0f5f54;
+      --brand-dark: #0c302b;
+      --accent: #d8a934;
+      --border: #d5e3df;
+      --shadow: 0 20px 55px rgba(12, 48, 43, 0.1);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 0%, rgba(15, 95, 84, 0.13), transparent 28rem),
+        linear-gradient(180deg, #f8fbfa 0%, var(--background) 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.72;
+    }
+
+    a {
+      color: var(--brand);
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      color: var(--brand-dark);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: #ffffff;
+      background: linear-gradient(135deg, #082b27 0%, #0f5f54 62%, #167466 100%);
+    }
+
+    .hero::after {
+      position: absolute;
+      right: -8rem;
+      bottom: -13rem;
+      width: 30rem;
+      height: 30rem;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 3rem rgba(255, 255, 255, 0.035),
+        0 0 0 7rem rgba(255, 255, 255, 0.025);
+      content: "";
+    }
+
+    .hero-inner,
+    .layout,
+    footer {
+      width: min(1120px, calc(100% - 36px));
+      margin-inline: auto;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      padding: 72px 0 64px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 18px;
+      color: #cce9e3;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--accent);
+      content: "";
+    }
+
+    h1 {
+      max-width: 820px;
+      margin: 0;
+      font-size: clamp(2.3rem, 6vw, 4.7rem);
+      line-height: 1.02;
+      letter-spacing: -0.045em;
+    }
+
+    .updated {
+      margin: 24px 0 0;
+      color: #d7ebe7;
+      font-size: 0.98rem;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 30px;
+      align-items: start;
+      padding: 42px 0 72px;
+    }
+
+    .contents {
+      position: sticky;
+      top: 18px;
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 12px 35px rgba(12, 48, 43, 0.07);
+      backdrop-filter: blur(12px);
+    }
+
+    .contents strong {
+      display: block;
+      margin-bottom: 12px;
+      font-size: 0.82rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .contents ol {
+      margin: 0;
+      padding-left: 1.25rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+
+    .contents li + li {
+      margin-top: 8px;
+    }
+
+    .contents a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contents a:hover {
+      color: var(--brand);
+    }
+
+    .document {
+      min-width: 0;
+    }
+
+    .intro,
+    .section,
+    .contact-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .intro {
+      margin-bottom: 22px;
+      padding: clamp(24px, 5vw, 42px);
+      font-size: 1.08rem;
+    }
+
+    .intro p:first-child {
+      margin-top: 0;
+    }
+
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section {
+      margin-top: 22px;
+      padding: clamp(24px, 5vw, 42px);
+      scroll-margin-top: 18px;
+    }
+
+    .section-number {
+      display: inline-grid;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      margin-bottom: 18px;
+      border-radius: 12px;
+      color: #ffffff;
+      background: var(--brand);
+      font-weight: 800;
+    }
+
+    h2,
+    h3 {
+      color: var(--brand-dark);
+      line-height: 1.22;
+    }
+
+    h2 {
+      margin: 0 0 24px;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      letter-spacing: -0.025em;
+    }
+
+    h3 {
+      margin: 30px 0 10px;
+      font-size: 1.1rem;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    ul {
+      margin: 14px 0 20px;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      position: relative;
+    }
+
+    .section ul > li {
+      padding-left: 25px;
+    }
+
+    .section ul > li::before {
+      position: absolute;
+      top: 0.7em;
+      left: 2px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(216, 169, 52, 0.14);
+      content: "";
+    }
+
+    .section ul > li + li {
+      margin-top: 9px;
+    }
+
+    .note {
+      margin: 22px 0 0;
+      padding: 17px 19px;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      background: #fbf7e9;
+    }
+
+    .path {
+      display: inline-flex;
+      margin: 4px 0 18px;
+      padding: 10px 15px;
+      border: 1px solid #bcd6d0;
+      border-radius: 11px;
+      color: var(--brand-dark);
+      background: var(--surface-soft);
+      font-weight: 800;
+    }
+
+    .contact-card {
+      display: grid;
+      gap: 7px;
+      margin-top: 22px;
+      padding: 24px;
+      border-color: #bcd6d0;
+      background: linear-gradient(135deg, #edf6f3, #ffffff);
+    }
+
+    .contact-card span {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .contact-card a {
+      width: fit-content;
+      font-size: 1.08rem;
+      font-weight: 800;
+    }
+
+    footer {
+      padding: 0 0 42px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero-inner {
+        padding: 55px 0 50px;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .contents {
+        position: static;
+      }
+
+      .contents ol {
+        columns: 2;
+        column-gap: 28px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero-inner,
+      .layout,
+      footer {
+        width: min(100% - 24px, 1120px);
+      }
+
+      .contents ol {
+        columns: 1;
+      }
+
+      .intro,
+      .section {
+        border-radius: 17px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        font-size: 11pt;
+      }
+
+      .hero {
+        color: #000000;
+        background: #ffffff;
+      }
+
+      .hero-inner {
+        padding: 20px 0;
+      }
+
+      .eyebrow,
+      .contents,
+      footer {
+        display: none;
+      }
+
+      .updated {
+        color: #000000;
+      }
+
+      .layout {
+        display: block;
+        padding: 0;
+      }
+
+      .intro,
+      .section,
+      .contact-card {
+        break-inside: avoid;
+        border: 0;
+        box-shadow: none;
+      }
+
+      .section {
+        padding-block: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow">ATNova · Curiosidades Automóvel / AmorimTech</p>
+      <h1>Política de Privacidade — ATNova</h1>
+      <p class="updated">Última atualização: 27 de junho de 2026</p>
+    </div>
+  </header>
+
+  <div class="layout">
+    <nav class="contents" aria-label="Índice da Política de Privacidade">
+      <strong>Nesta página</strong>
+      <ol>
+        <li><a href="#dados-recolhidos">Dados recolhidos</a></li>
+        <li><a href="#finalidades">Finalidades</a></li>
+        <li><a href="#fontes-externas">Fontes externas</a></li>
+        <li><a href="#partilha">Partilha de dados</a></li>
+        <li><a href="#permissoes">Permissões</a></li>
+        <li><a href="#fundamentos">Fundamentos jurídicos</a></li>
+        <li><a href="#seguranca">Segurança</a></li>
+        <li><a href="#conservacao">Conservação</a></li>
+        <li><a href="#eliminacao">Eliminação da conta</a></li>
+        <li><a href="#direitos">Direitos do utilizador</a></li>
+        <li><a href="#menores">Menores</a></li>
+        <li><a href="#transferencias">Transferências</a></li>
+        <li><a href="#alteracoes">Alterações</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#eliminacao-app">Eliminação na aplicação</a></li>
+      </ol>
+    </nav>
+
+    <main class="document">
+      <div class="intro">
+        <p>A presente Política de Privacidade explica como a aplicação ATNova, disponibilizada por Curiosidades Automóvel / AmorimTech, recolhe, utiliza, armazena e partilha informações quando o utilizador usa a aplicação.</p>
+        <p>Para questões relacionadas com privacidade ou proteção de dados, contacte:</p>
+        <div class="contact-card">
+          <span>E-mail:</span>
+          <a href="mailto:curiosidadesautomovel@gmail.com">curiosidadesautomovel@gmail.com</a>
+        </div>
+      </div>
+
+      <section class="section" id="dados-recolhidos">
+        <span class="section-number" aria-hidden="true">1</span>
+        <h2>Dados recolhidos</h2>
+
+        <h3>1.1. Dados da conta</h3>
+        <p>Para permitir o acesso à aplicação através da conta Google, podemos tratar:</p>
+        <ul>
+          <li>Nome associado à conta Google;</li>
+          <li>Endereço de e-mail;</li>
+          <li>Fotografia de perfil, quando disponibilizada pela Google;</li>
+          <li>Identificador único da conta Firebase;</li>
+          <li>Informações técnicas necessárias para autenticar e manter a sessão.</li>
+        </ul>
+        <p>A autenticação é realizada através do Google Sign-In e do Firebase Authentication.</p>
+
+        <h3>1.2. Dados introduzidos pelo utilizador</h3>
+        <p>A ATNova permite criar uma garagem virtual e guardar informações sobre veículos. Dependendo das funcionalidades utilizadas, poderão ser armazenados:</p>
+        <ul>
+          <li>Nome ou designação do veículo;</li>
+          <li>Marca, modelo e ano;</li>
+          <li>Matrícula;</li>
+          <li>Cor, dimensões, motorização, quilometragem, extras e estado;</li>
+          <li>Fotografias dos veículos;</li>
+          <li>Quantidade de combustível e registos de consumo;</li>
+          <li>Datas e informações sobre inspeções, IUC, extintores e manutenção;</li>
+          <li>Tipo e marca de óleo;</li>
+          <li>Mudanças de pneus, avarias, reparações e outras observações;</li>
+          <li>Modificações realizadas e respetivas fotografias;</li>
+          <li>Histórico de compras, vendas, inspeções, acidentes ou outros acontecimentos;</li>
+          <li>Datas, descrições, quilometragem e localização introduzida manualmente;</li>
+          <li>Preferências de apresentação e configuração da aplicação.</li>
+        </ul>
+        <p class="note">A ATNova não obtém automaticamente a localização GPS do dispositivo. Qualquer localização existente num registo é introduzida manualmente pelo utilizador.</p>
+
+        <h3>1.3. Fotografias e ficheiros</h3>
+        <p>Quando o utilizador escolhe fotografias através do seletor do dispositivo, a aplicação acede apenas às imagens selecionadas. As fotografias podem ser:</p>
+        <ul>
+          <li>Enviadas para o Firebase Storage;</li>
+          <li>Associadas ao veículo correspondente;</li>
+          <li>Guardadas temporariamente em cache no dispositivo para melhorar o desempenho.</li>
+        </ul>
+        <p>Se o utilizador fornecer o endereço de uma imagem alojada externamente, o servidor dessa imagem poderá receber informações técnicas, como o endereço IP, quando a imagem for carregada.</p>
+
+        <h3>1.4. Dados técnicos e publicitários</h3>
+        <p>A aplicação integra o Google Mobile Ads SDK para apresentar anúncios. Este serviço poderá recolher e partilhar automaticamente:</p>
+        <ul>
+          <li>Endereço IP, que pode permitir estimar uma localização geral;</li>
+          <li>Identificador de publicidade do dispositivo;</li>
+          <li>App Set ID e outros identificadores do dispositivo ou da conta;</li>
+          <li>Interações com a aplicação e com os anúncios, como aberturas, toques e visualizações;</li>
+          <li>Informações de diagnóstico e desempenho, como tempo de arranque, falhas, bloqueios e utilização de energia.</li>
+        </ul>
+        <p>Estes dados são tratados pela Google para apresentação e medição de anúncios, análise, segurança e prevenção de fraude.</p>
+        <p>O utilizador pode gerir ou eliminar o identificador de publicidade através das definições de privacidade do dispositivo Android.</p>
+
+        <h3>1.5. Cache e dados guardados localmente</h3>
+        <p>A aplicação pode guardar localmente:</p>
+        <ul>
+          <li>Fotografias em cache;</li>
+          <li>Catálogos de marcas e modelos;</li>
+          <li>Resultados de consultas sobre características de veículos;</li>
+          <li>Preferências necessárias ao funcionamento da aplicação;</li>
+          <li>Informações necessárias para agendar notificações locais.</li>
+        </ul>
+        <p>Os catálogos e resultados técnicos também podem ser guardados numa cache partilhada no Firebase, sem associação intencional à conta do utilizador, durante um período máximo previsto de 180 dias.</p>
+      </section>
+
+      <section class="section" id="finalidades">
+        <span class="section-number" aria-hidden="true">2</span>
+        <h2>Finalidades do tratamento</h2>
+        <p>Os dados são tratados para:</p>
+        <ul>
+          <li>Criar e gerir a conta do utilizador;</li>
+          <li>Autenticar o acesso à aplicação;</li>
+          <li>Guardar e sincronizar a garagem virtual;</li>
+          <li>Apresentar veículos, fotografias, consumos, manutenções e histórico;</li>
+          <li>Recuperar os dados em diferentes dispositivos;</li>
+          <li>Agendar lembretes locais de manutenção, inspeção ou outras datas;</li>
+          <li>Gerar e partilhar fichas técnicas em PDF quando solicitado;</li>
+          <li>Pesquisar marcas, modelos e especificações públicas de veículos;</li>
+          <li>Apresentar e medir anúncios;</li>
+          <li>Garantir segurança, prevenir fraude e resolver problemas técnicos;</li>
+          <li>Cumprir obrigações legais aplicáveis.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="fontes-externas">
+        <span class="section-number" aria-hidden="true">3</span>
+        <h2>Consultas a fontes externas</h2>
+        <p>Para obter informações públicas sobre veículos, a aplicação pode enviar a marca, o modelo, o ano e termos de pesquisa para serviços externos, incluindo:</p>
+        <ul>
+          <li>NHTSA vPIC;</li>
+          <li>Wikipedia e Wikidata;</li>
+          <li>CarQuery API;</li>
+          <li>DBpedia e QLever.</li>
+        </ul>
+        <p>Estas consultas não incluem intencionalmente o nome, e-mail ou identificador Firebase do utilizador. Contudo, os serviços externos poderão receber dados técnicos normais de uma ligação à Internet, como o endereço IP.</p>
+      </section>
+
+      <section class="section" id="partilha">
+        <span class="section-number" aria-hidden="true">4</span>
+        <h2>Partilha de dados</h2>
+        <p>Os dados podem ser tratados pelos seguintes prestadores:</p>
+        <ul>
+          <li>Google Sign-In, para autenticação;</li>
+          <li>Firebase Authentication, para gestão da conta;</li>
+          <li>Cloud Firestore, para armazenamento e sincronização dos registos;</li>
+          <li>Firebase Storage, para armazenamento de fotografias;</li>
+          <li>Google Mobile Ads, para apresentação de anúncios, medição e prevenção de fraude;</li>
+          <li>Fontes externas de informação automóvel identificadas anteriormente.</li>
+        </ul>
+        <p class="note">Não vendemos os dados pessoais, fotografias ou informações dos veículos dos utilizadores.</p>
+        <p>Quando o utilizador escolhe exportar ou partilhar uma ficha em PDF, o ficheiro apenas é enviado para a aplicação ou destinatário selecionado pelo próprio utilizador. A partir desse momento, aplicam-se também as práticas de privacidade do serviço escolhido.</p>
+        <p>Mais informações podem ser consultadas nas políticas da Google, do Firebase e da Wikimedia Foundation.</p>
+      </section>
 
       <section class="section" id="permissoes">
         <span class="section-number" aria-hidden="true">5</span>
